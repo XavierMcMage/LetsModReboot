@@ -1,6 +1,7 @@
 package com.xaviermcmage.letsmodreboot;
 
 import com.xaviermcmage.letsmodreboot.handler.ConfigurationHandler;
+import com.xaviermcmage.letsmodreboot.init.ModBlocks;
 import com.xaviermcmage.letsmodreboot.init.ModItems;
 import com.xaviermcmage.letsmodreboot.proxy.IProxy;
 import com.xaviermcmage.letsmodreboot.reference.Reference;
@@ -30,6 +31,7 @@ public class LetsModReboot
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
 
         ModItems.init();
+        ModBlocks.init();
 
         LogHelper.info("Pre Initialization Complete!");
     }
