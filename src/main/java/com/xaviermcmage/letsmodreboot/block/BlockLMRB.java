@@ -1,5 +1,6 @@
 package com.xaviermcmage.letsmodreboot.block;
 
+import com.xaviermcmage.letsmodreboot.creativetab.CreativeTabLMRB;
 import com.xaviermcmage.letsmodreboot.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -8,12 +9,16 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 
 public class BlockLMRB extends Block {
-    public BlockLMRB(Material material) {
+    public BlockLMRB(Material material)
+    {
         super(material);
+        this.setCreativeTab(CreativeTabLMRB.LMRB_TAB);
     }
 
-    public BlockLMRB() {
+    public BlockLMRB()
+    {
         this(Material.rock);
+        this.setCreativeTab(CreativeTabLMRB.LMRB_TAB);
     }
 
     @Override
