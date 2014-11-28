@@ -1,8 +1,10 @@
 package com.xaviermcmage.letsmodreboot.proxy;
 
-/**
- * Created by Xavier on 11/21/2014.
- */
 public class ServerProxy extends CommonProxy
 {
+    @Override
+    public void registerKeyBindings()
+    {
+        // NOOP - No Operations
+    }
 }

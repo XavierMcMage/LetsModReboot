@@ -1,7 +1,19 @@
+# Keys
+keys.letsmodreboot.category=Let's Mod Reboot
+keys.letsmodreboot.charge=Charge
+keys.letsmodreboot.release=Release
+
+# Creative Tabs
+itemGroup.letsmodreboot=Let's Mod Reboot
+
+# Items
 item.letsmodreboot:mapleLeaf.name=Maple Leaf of Awesomeness
 item.letsmodreboot:glowLeaf.name=Maple Leaf of Radiance
 item.letsmodreboot:hardLeaf.name=Maple Leaf of Resilience
+
+# Blocks
 tile.letsmodreboot:mapleFlag.name=Canadian Flag of Awesomeness
 tile.letsmodreboot:glowFlag.name=Canadian Flag of Radiance
 tile.letsmodreboot:hardFlag.name=Canadian Flag of Resilience
-itemGroup.letsmodreboot=Let's Mod Reboot
+
+

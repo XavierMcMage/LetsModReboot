@@ -1,9 +1,11 @@
 package com.xaviermcmage.letsmodreboot;
 
+import com.xaviermcmage.letsmodreboot.client.handler.KeyInputEventHandler;
 import com.xaviermcmage.letsmodreboot.handler.ConfigurationHandler;
 import com.xaviermcmage.letsmodreboot.init.ModBlocks;
 import com.xaviermcmage.letsmodreboot.init.ModItems;
 import com.xaviermcmage.letsmodreboot.init.Recipes;
+import com.xaviermcmage.letsmodreboot.proxy.ClientProxy;
 import com.xaviermcmage.letsmodreboot.proxy.IProxy;
 import com.xaviermcmage.letsmodreboot.reference.Reference;
 import com.xaviermcmage.letsmodreboot.utility.LogHelper;
@@ -31,6 +33,7 @@ public class LetsModReboot
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
 
+        proxy.registerKeyBindings();
         ModItems.init();
         ModBlocks.init();
 
@@ -41,6 +44,7 @@ public class LetsModReboot
     public void init(FMLInitializationEvent event)
     {
         //Register GUIs, Tile Entities, Crafting Recipes. General event handlers
+        FMLCommonHandler.instance().bus().register(new KeyInputEventHandler());
         Recipes.init();
         LogHelper.info("Initialization Complete!");
     }
